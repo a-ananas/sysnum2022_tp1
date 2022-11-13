@@ -6,7 +6,7 @@ Cloner le dépôt et lancer `make` afin de lancer le simulateur sur le test `tes
 ```bash
 $ make file=ram n=2
 ```
-lance le simulateur sur le programme `test/ram.net` pour 2 cycles puis s'arrête.
+lance le simulateur sur le programme `test/ram.net` pour 2 cycles puis s'arrête. D'autres options sont disponibles pour exécuter les tests des premières questions, vous pouvez les voir en lançant `make help`.
 
 ## Fonctionnement du simulateur
 Le simulateur utilise deux espaces de mémoires : un pour les valeurs modifiées lors du cycle actuel et un autre pour les valeurs du cycle précédents. Ceci est nécessaire pour que les registres n'induisent pas de cycle et que la valeur renvoyé ne soit pas déjà modifié lors du cycle actuel. 
