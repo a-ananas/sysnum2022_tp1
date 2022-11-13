@@ -55,6 +55,6 @@ Le simulateur utilise deux espaces de mémoires : un pour les valeurs modifiées
 
 \section{Questionnements et difficultés}
 
-Les principales difficultés rencontrées étaient le fait d'essayer d'être le plus exhaustif possible sur les opérations réalisables. En effet, les opérations logiques que j'ai codé s'opèrent sur des valeurs de même type et de même taille. J'aurais pu faire en sorte que des opérations entre un bit et un bus soit réalisables. D'autre part, les registres utilisent un deuxième environnement de mémoire, mais j'aurais pu restructurer la programmation de l'ordre des équations afin que les opérations utilisant les registres arrivent en premier.
+Les principales difficultés rencontrées étaient le fait d'essayer d'être le plus exhaustif possible sur les opérations réalisables. En effet, les opérations logiques que j'ai codé s'opèrent sur des valeurs de même type et de même taille. J'aurais pu faire en sorte que des opérations entre un bit et un bus soit réalisables. D'autre part, les registres utilisent un deuxième environnement de mémoire, mais j'aurais pu restructurer la programmation de l'ordre des équations afin que les opérations utilisant les registres arrivent en premier. Un autre problème est le rattrapage d'exception et notamment les entrées des programmes : la simulation s'interrompt à la moindre erreur de saisie, plutôt que de saisir l'erreur et demander une nouvelle saisie. Je devrais faire propager les exceptions au travers des différentes fonctions utilisées dans ma simulation.
 
 \end{document}
