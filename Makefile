@@ -1,6 +1,6 @@
 file = fulladder
-n = 
 list = "clock_div cm2 fulladder nadder ram"
+n = 
 print = 
 
 
@@ -37,20 +37,20 @@ list:
 	@echo "liste des valeurs possibles pour \`file\` : "$(list)
 
 help:
-	@echo "aide pour le projet de simulateur\n\n\
-		help : affiche cette aide\n\
-		défaut : exécute netlist_simulator sur fulladder\n\
+	@echo "aide pour le projet de simulateur :\n\
+		\e[1;7mhelp\e[0m: affiche cette aide\n\
+		\e[2;3mdéfaut\e[0m : exécute netlist_simulator sur fulladder\n\
 			variables :\n\
 				file : fichier à exécuter\n\
 				n : nombres de cycles\n\
-		sched : exécute le test de scheduler sur fulladder\n\
+		\e[1;7msched\e[0m : exécute le test de scheduler sur fulladder\n\
 			variables :\n\
 				file : fichier à exécuter\n\
 				n : nombres de cycles\n\
 				print : option print\n\
-		graph : exécute les tests du tri topologique\n\
-		list : affiche la liste des fichier disponibles\n\
-		clean : nettoyer le projet"
+		\e[1;7mgraph\e[0m : exécute les tests du tri topologique\n\
+		\e[1;7mlist\e[0m : affiche la liste des fichier disponibles\n\
+		\e[1;7mclean\e[0m : nettoyer le projet"
 
 clean:
 	dune clean
