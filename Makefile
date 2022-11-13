@@ -14,7 +14,6 @@ netlist_simulator.byte:
 clean:
 	dune clean
 	rm -f test/*_sch*.net
-	find -name '*~' -delete
 
 .PHONY: all clean 
 
