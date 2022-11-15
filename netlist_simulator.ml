@@ -136,13 +136,13 @@ let simulator program number_steps =
 	let env = Env.map ty_to_val program.p_vars in
 	let rec follow_prog eq env reg_env = match eq with
 		| [] -> env
-		| eq::q -> let new_env = eval_eq eq env reg_env in follow_prog q new_env env
+		| eq::q -> let new_env = eval_eq eq env reg_env in follow_prog q new_env reg_env
 	in
 	let rec sim prog env n = match n with
 		| 0 -> ()
-		|	n -> Format.print_string "###INPUTS###\n" ;let inp_env = set_inputs prog.p_inputs env in 
+		| n -> Format.print_string "\n###INPUTS###\n" ;let inp_env = set_inputs prog.p_inputs env in 
 							let new_env = follow_prog prog.p_eqs inp_env env in 
-							(Format.print_string "###OUTPUTS###\n" ; fch_prt_outputs prog.p_outputs new_env ; sim prog new_env (n-1))
+							(Format.print_string "\n###OUTPUTS###\n" ; fch_prt_outputs prog.p_outputs new_env ; sim prog new_env (n-1))
 	in 
 	sim program env number_steps
 
