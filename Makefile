@@ -50,7 +50,7 @@ help:
 				print : option print\n\
 		\e[1;7mgraph\e[0m : exécute les tests du tri topologique\n\
 		\e[1;7mlist\e[0m : affiche la liste des fichier disponibles\n\
-		\e[1;7mclean\e[0m : nettoyer le projet"
+		\e[1;7mclean\e[0m : passer un petit coup de balai"
 
 clean:
 	dune clean
